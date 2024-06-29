@@ -19,6 +19,8 @@
 		D60296912C2F9FCE003E83AA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60296902C2F9FCE003E83AA /* Item.swift */; };
 		D60296932C2F9FCF003E83AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60296922C2F9FCF003E83AA /* Assets.xcassets */; };
 		D60296962C2F9FCF003E83AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60296952C2F9FCF003E83AA /* Preview Assets.xcassets */; };
+		D6D00D612C2FF99900AE7C28 /* CoreEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D00D602C2FF99900AE7C28 /* CoreEngine.swift */; };
+		D6D00D632C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D6D00D622C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		D60296902C2F9FCE003E83AA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D60296922C2F9FCF003E83AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60296952C2F9FCF003E83AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D6D00D602C2FF99900AE7C28 /* CoreEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreEngine.swift; sourceTree = "<group>"; };
+		D6D00D622C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Emotion_Analstics_Gish.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				1780FD9A2C2FD2CA008F8937 /* AudioEngine.swift */,
+				D6D00D602C2FF99900AE7C28 /* CoreEngine.swift */,
 				1780FD9C2C2FD3EE008F8937 /* AudioRecoder.swift */,
 			);
 			path = Manager;
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				48241E372C2FF8380074C36D /* Repository */,
+				D6D00D622C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel */,
 				1780FD912C2FC5E1008F8937 /* Manager */,
 				17565A812C2FA9B700A2EE53 /* App */,
 				17565A802C2FA93E00A2EE53 /* View */,
@@ -218,8 +224,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1780FD9D2C2FD3EE008F8937 /* AudioRecoder.swift in Sources */,
+				D6D00D612C2FF99900AE7C28 /* CoreEngine.swift in Sources */,
 				D602968F2C2F9FCE003E83AA /* RecodeMainView.swift in Sources */,
 				1780FDA22C2FD6A0008F8937 /* RecordPlayerView.swift in Sources */,
+				D6D00D632C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel in Sources */,
 				1780FD852C2FAC71008F8937 /* RecordListView.swift in Sources */,
 				D60296912C2F9FCE003E83AA /* Item.swift in Sources */,
 				1780FD8B2C2FB9C1008F8937 /* WaveBar.swift in Sources */,
