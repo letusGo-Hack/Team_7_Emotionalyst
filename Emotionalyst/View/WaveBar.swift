@@ -15,8 +15,9 @@ struct WaveBar: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 3)
             .fill(.indigo.gradient)
-            .frame(height: (isPlay ? high : low) * 64)
-            .frame(height: 64, alignment: .bottom)
+            .frame(height: (isPlay ? high : low) * 15)
+            .frame(height: 15, alignment: .bottom)
+            .frame(maxHeight: 50)
             .animation(.linear(duration: 5).repeatForever(), value: isPlay)
     }
 }

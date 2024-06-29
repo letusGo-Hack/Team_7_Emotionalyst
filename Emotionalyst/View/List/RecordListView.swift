@@ -54,9 +54,29 @@ struct RecordListView: View {
 }
 
 enum Emotion: String, Equatable, Codable {
-    case happy = "happy"
-    case sad = "sad"
-    case angry = "angry"
+    case angry = "ANG"
+    case fear = "FEA"
+    case happy = "HAP"
+    case joy = "JOY"
+    case neutral = "NEU"
+    case sad = "SAD"
+    
+    func toEmoji() -> String {
+        switch self {
+        case .angry:
+            return "😡"
+        case .fear:
+            return "😱"
+        case .happy:
+            return "😁"
+        case .joy:
+            return "😎"
+        case .neutral:
+            return "😐"
+        case .sad:
+            return "😢"
+        }
+    }
 }
 
 struct AudioMetaData: Hashable, Codable, Identifiable {

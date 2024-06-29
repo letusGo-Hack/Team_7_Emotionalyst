@@ -20,6 +20,7 @@ class CoreEngine: ObservableObject {
     var model: Emotion_Analstics_Gish?
     
     @Published var rmsData: Float = 0.0
+    @Published var emotion: Emotion = .neutral
     
     init() {
         self.audioEngine = AVAudioEngine()
@@ -114,7 +115,7 @@ class CoreEngine: ObservableObject {
                     for (label, probability) in probabilities {
                         
                         if probability > 0.5{
-                            print("Label: \(label), Probability: \(probability)")
+                            self.emotion = Emotion(rawValue: label)!
                         }
                     }
                 }
@@ -127,7 +128,7 @@ class CoreEngine: ObservableObject {
     private func rms(data: UnsafeMutablePointer<Float>, frameLength: UInt) -> Float {
         var val : Float = 0
         vDSP_measqv(data, 1, &val, frameLength)
-        val *= 1000
+        val *= 500
         return val
     }
     
