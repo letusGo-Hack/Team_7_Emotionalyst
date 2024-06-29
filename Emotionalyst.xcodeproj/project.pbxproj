@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1ED815E2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A1ED815D2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel */; };
 		17565A7F2C2FA93B00A2EE53 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17565A7E2C2FA93B00A2EE53 /* RecordingView.swift */; };
 		1780FD852C2FAC71008F8937 /* RecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD842C2FAC71008F8937 /* RecordListView.swift */; };
 		1780FD892C2FADE2008F8937 /* RecordingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD882C2FADE2008F8937 /* RecordingButton.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1ED815D2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Emotion_Analstics_Gish.mlmodel; sourceTree = "<group>"; };
 		17565A7E2C2FA93B00A2EE53 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		1780FD842C2FAC71008F8937 /* RecordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListView.swift; sourceTree = "<group>"; };
 		1780FD882C2FADE2008F8937 /* RecordingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButton.swift; sourceTree = "<group>"; };
@@ -37,6 +39,22 @@
 		D60296952C2F9FCF003E83AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		48514B852C2FBD66003E6428 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AudioItem.swift,
+				Emotion.swift,
+				SwiftDataTestView.swift,
+			);
+			target = D60296882C2F9FCE003E83AA /* Emotionalyst */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		48514B822C2FBD25003E6428 /* Repository */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48514B852C2FBD66003E6428 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Repository; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		D60296862C2F9FCE003E83AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -48,6 +66,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1ED815C2C2FC5DD00E289F5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+    };
 		17565A802C2FA93E00A2EE53 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,11 +137,13 @@
 		D602968B2C2F9FCE003E83AA /* Emotionalyst */ = {
 			isa = PBXGroup;
 			children = (
-				1780FD912C2FC5E1008F8937 /* Manager */,
-				17565A812C2FA9B700A2EE53 /* App */,
-				17565A802C2FA93E00A2EE53 /* View */,
+				48514B822C2FBD25003E6428 /* Repository */,
+				D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */,
+				D602968E2C2F9FCE003E83AA /* RecodeMainView.swift */,
 				D60296902C2F9FCE003E83AA /* Item.swift */,
+				A1ED815C2C2FC5DD00E289F5 /* Core */,
 				D60296922C2F9FCF003E83AA /* Assets.xcassets */,
+				A1ED815D2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel */,
 				D60296942C2F9FCF003E83AA /* Preview Content */,
 			);
 			path = Emotionalyst;
@@ -202,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1780FD9D2C2FD3EE008F8937 /* AudioRecoder.swift in Sources */,
+				A1ED815E2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel in Sources */,
 				D602968F2C2F9FCE003E83AA /* RecodeMainView.swift in Sources */,
 				1780FDA22C2FD6A0008F8937 /* RecordPlayerView.swift in Sources */,
 				1780FD852C2FAC71008F8937 /* RecordListView.swift in Sources */,
