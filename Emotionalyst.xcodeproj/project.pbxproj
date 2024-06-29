@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17565A7F2C2FA93B00A2EE53 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17565A7E2C2FA93B00A2EE53 /* RecordingView.swift */; };
+		1780FD852C2FAC71008F8937 /* RecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD842C2FAC71008F8937 /* RecordListView.swift */; };
+		1780FD892C2FADE2008F8937 /* RecordingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD882C2FADE2008F8937 /* RecordingButton.swift */; };
+		1780FD8B2C2FB9C1008F8937 /* WaveBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD8A2C2FB9C1008F8937 /* WaveBar.swift */; };
 		D602968D2C2F9FCE003E83AA /* EmotionalystApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */; };
-		D602968F2C2F9FCE003E83AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602968E2C2F9FCE003E83AA /* ContentView.swift */; };
+		D602968F2C2F9FCE003E83AA /* RecodeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602968E2C2F9FCE003E83AA /* RecodeMainView.swift */; };
 		D60296912C2F9FCE003E83AA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60296902C2F9FCE003E83AA /* Item.swift */; };
 		D60296932C2F9FCF003E83AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60296922C2F9FCF003E83AA /* Assets.xcassets */; };
 		D60296962C2F9FCF003E83AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60296952C2F9FCF003E83AA /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17565A7E2C2FA93B00A2EE53 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		1780FD842C2FAC71008F8937 /* RecordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListView.swift; sourceTree = "<group>"; };
+		1780FD882C2FADE2008F8937 /* RecordingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButton.swift; sourceTree = "<group>"; };
+		1780FD8A2C2FB9C1008F8937 /* WaveBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveBar.swift; sourceTree = "<group>"; };
 		D60296892C2F9FCE003E83AA /* Emotionalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotionalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalystApp.swift; sourceTree = "<group>"; };
-		D602968E2C2F9FCE003E83AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D602968E2C2F9FCE003E83AA /* RecodeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecodeMainView.swift; sourceTree = "<group>"; };
 		D60296902C2F9FCE003E83AA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D60296922C2F9FCF003E83AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60296952C2F9FCF003E83AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -34,6 +42,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17565A802C2FA93E00A2EE53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D602968E2C2F9FCE003E83AA /* RecodeMainView.swift */,
+				17565A7E2C2FA93B00A2EE53 /* RecordingView.swift */,
+				1780FD842C2FAC71008F8937 /* RecordListView.swift */,
+				1780FD882C2FADE2008F8937 /* RecordingButton.swift */,
+				1780FD8A2C2FB9C1008F8937 /* WaveBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17565A812C2FA9B700A2EE53 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1780FD912C2FC5E1008F8937 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		D60296802C2F9FCE003E83AA = {
 			isa = PBXGroup;
 			children = (
@@ -53,8 +88,9 @@
 		D602968B2C2F9FCE003E83AA /* Emotionalyst */ = {
 			isa = PBXGroup;
 			children = (
-				D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */,
-				D602968E2C2F9FCE003E83AA /* ContentView.swift */,
+				1780FD912C2FC5E1008F8937 /* Manager */,
+				17565A812C2FA9B700A2EE53 /* App */,
+				17565A802C2FA93E00A2EE53 /* View */,
 				D60296902C2F9FCE003E83AA /* Item.swift */,
 				D60296922C2F9FCF003E83AA /* Assets.xcassets */,
 				D60296942C2F9FCF003E83AA /* Preview Content */,
@@ -140,8 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D602968F2C2F9FCE003E83AA /* ContentView.swift in Sources */,
+				D602968F2C2F9FCE003E83AA /* RecodeMainView.swift in Sources */,
+				1780FD852C2FAC71008F8937 /* RecordListView.swift in Sources */,
 				D60296912C2F9FCE003E83AA /* Item.swift in Sources */,
+				1780FD8B2C2FB9C1008F8937 /* WaveBar.swift in Sources */,
+				1780FD892C2FADE2008F8937 /* RecordingButton.swift in Sources */,
+				17565A7F2C2FA93B00A2EE53 /* RecordingView.swift in Sources */,
 				D602968D2C2F9FCE003E83AA /* EmotionalystApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
