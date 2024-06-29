@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,21 @@
 		D60296922C2F9FCF003E83AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60296952C2F9FCF003E83AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		48241E3A2C2FF85C0074C36D /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AudioItem.swift,
+				SwiftDataTestView.swift,
+			);
+			target = D60296882C2F9FCE003E83AA /* Emotionalyst */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		48241E372C2FF8380074C36D /* Repository */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48241E3A2C2FF85C0074C36D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Repository; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D60296862C2F9FCE003E83AA /* Frameworks */ = {
@@ -113,6 +128,7 @@
 		D602968B2C2F9FCE003E83AA /* Emotionalyst */ = {
 			isa = PBXGroup;
 			children = (
+				48241E372C2FF8380074C36D /* Repository */,
 				1780FD912C2FC5E1008F8937 /* Manager */,
 				17565A812C2FA9B700A2EE53 /* App */,
 				17565A802C2FA93E00A2EE53 /* View */,
