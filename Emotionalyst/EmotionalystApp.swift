@@ -12,7 +12,7 @@ import SwiftData
 struct EmotionalystApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            AudioItem.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,7 @@ struct EmotionalystApp: App {
 
     var body: some Scene {
         WindowGroup {
-            EmotionalystView()
+            SwiftDataTestView()
         }
         .modelContainer(sharedModelContainer)
     }
