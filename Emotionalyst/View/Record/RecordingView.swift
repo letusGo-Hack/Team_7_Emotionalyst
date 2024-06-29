@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct RecordingView: View {
+    
+    @StateObject private var audioRecoder = AudioRecorder()
+    
+    
     var body: some View {
         VStack {
             Spacer()

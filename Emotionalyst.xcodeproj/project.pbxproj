@@ -11,6 +11,9 @@
 		1780FD852C2FAC71008F8937 /* RecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD842C2FAC71008F8937 /* RecordListView.swift */; };
 		1780FD892C2FADE2008F8937 /* RecordingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD882C2FADE2008F8937 /* RecordingButton.swift */; };
 		1780FD8B2C2FB9C1008F8937 /* WaveBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD8A2C2FB9C1008F8937 /* WaveBar.swift */; };
+		1780FD9B2C2FD2CA008F8937 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD9A2C2FD2CA008F8937 /* AudioEngine.swift */; };
+		1780FD9D2C2FD3EE008F8937 /* AudioRecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FD9C2C2FD3EE008F8937 /* AudioRecoder.swift */; };
+		1780FDA22C2FD6A0008F8937 /* RecordPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1780FDA12C2FD6A0008F8937 /* RecordPlayerView.swift */; };
 		D602968D2C2F9FCE003E83AA /* EmotionalystApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */; };
 		D602968F2C2F9FCE003E83AA /* RecodeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602968E2C2F9FCE003E83AA /* RecodeMainView.swift */; };
 		D60296912C2F9FCE003E83AA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60296902C2F9FCE003E83AA /* Item.swift */; };
@@ -23,6 +26,9 @@
 		1780FD842C2FAC71008F8937 /* RecordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListView.swift; sourceTree = "<group>"; };
 		1780FD882C2FADE2008F8937 /* RecordingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButton.swift; sourceTree = "<group>"; };
 		1780FD8A2C2FB9C1008F8937 /* WaveBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveBar.swift; sourceTree = "<group>"; };
+		1780FD9A2C2FD2CA008F8937 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		1780FD9C2C2FD3EE008F8937 /* AudioRecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecoder.swift; sourceTree = "<group>"; };
+		1780FDA12C2FD6A0008F8937 /* RecordPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPlayerView.swift; sourceTree = "<group>"; };
 		D60296892C2F9FCE003E83AA /* Emotionalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotionalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalystApp.swift; sourceTree = "<group>"; };
 		D602968E2C2F9FCE003E83AA /* RecodeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecodeMainView.swift; sourceTree = "<group>"; };
@@ -46,9 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				D602968E2C2F9FCE003E83AA /* RecodeMainView.swift */,
-				17565A7E2C2FA93B00A2EE53 /* RecordingView.swift */,
-				1780FD842C2FAC71008F8937 /* RecordListView.swift */,
-				1780FD882C2FADE2008F8937 /* RecordingButton.swift */,
+				1780FDA02C2FD685008F8937 /* Record */,
+				1780FD9F2C2FD66E008F8937 /* List */,
 				1780FD8A2C2FB9C1008F8937 /* WaveBar.swift */,
 			);
 			path = View;
@@ -65,8 +70,28 @@
 		1780FD912C2FC5E1008F8937 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1780FD9A2C2FD2CA008F8937 /* AudioEngine.swift */,
+				1780FD9C2C2FD3EE008F8937 /* AudioRecoder.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		1780FD9F2C2FD66E008F8937 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1780FD842C2FAC71008F8937 /* RecordListView.swift */,
+				1780FDA12C2FD6A0008F8937 /* RecordPlayerView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		1780FDA02C2FD685008F8937 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				17565A7E2C2FA93B00A2EE53 /* RecordingView.swift */,
+				1780FD882C2FADE2008F8937 /* RecordingButton.swift */,
+			);
+			path = Record;
 			sourceTree = "<group>";
 		};
 		D60296802C2F9FCE003E83AA = {
@@ -176,10 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1780FD9D2C2FD3EE008F8937 /* AudioRecoder.swift in Sources */,
 				D602968F2C2F9FCE003E83AA /* RecodeMainView.swift in Sources */,
+				1780FDA22C2FD6A0008F8937 /* RecordPlayerView.swift in Sources */,
 				1780FD852C2FAC71008F8937 /* RecordListView.swift in Sources */,
 				D60296912C2F9FCE003E83AA /* Item.swift in Sources */,
 				1780FD8B2C2FB9C1008F8937 /* WaveBar.swift in Sources */,
+				1780FD9B2C2FD2CA008F8937 /* AudioEngine.swift in Sources */,
 				1780FD892C2FADE2008F8937 /* RecordingButton.swift in Sources */,
 				17565A7F2C2FA93B00A2EE53 /* RecordingView.swift in Sources */,
 				D602968D2C2F9FCE003E83AA /* EmotionalystApp.swift in Sources */,

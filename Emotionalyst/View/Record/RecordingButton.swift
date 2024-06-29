@@ -35,7 +35,7 @@ struct RecordingButton: View {
 }
 
 func requestRecordPermission() {
-    AVAudioSession.sharedInstance().requestRecordPermission { granted in
+    AVAudioApplication.requestRecordPermission { granted in
         if granted {
             // Permission granted
         } else {
