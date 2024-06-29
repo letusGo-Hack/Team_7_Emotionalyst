@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1ED815E2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A1ED815D2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel */; };
 		D602968D2C2F9FCE003E83AA /* EmotionalystApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */; };
 		D602968F2C2F9FCE003E83AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602968E2C2F9FCE003E83AA /* ContentView.swift */; };
 		D60296912C2F9FCE003E83AA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60296902C2F9FCE003E83AA /* Item.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1ED815D2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Emotion_Analstics_Gish.mlmodel; sourceTree = "<group>"; };
 		D60296892C2F9FCE003E83AA /* Emotionalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotionalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalystApp.swift; sourceTree = "<group>"; };
 		D602968E2C2F9FCE003E83AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1ED815C2C2FC5DD00E289F5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		D60296802C2F9FCE003E83AA = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +65,9 @@
 				D602968C2C2F9FCE003E83AA /* EmotionalystApp.swift */,
 				D602968E2C2F9FCE003E83AA /* ContentView.swift */,
 				D60296902C2F9FCE003E83AA /* Item.swift */,
+				A1ED815C2C2FC5DD00E289F5 /* Core */,
 				D60296922C2F9FCF003E83AA /* Assets.xcassets */,
+				A1ED815D2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel */,
 				D60296942C2F9FCF003E83AA /* Preview Content */,
 			);
 			path = Emotionalyst;
@@ -140,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1ED815E2C2FC81600E289F5 /* Emotion_Analstics_Gish.mlmodel in Sources */,
 				D602968F2C2F9FCE003E83AA /* ContentView.swift in Sources */,
 				D60296912C2F9FCE003E83AA /* Item.swift in Sources */,
 				D602968D2C2F9FCE003E83AA /* EmotionalystApp.swift in Sources */,
