@@ -25,6 +25,10 @@ struct RecordingView: View {
                 WaveBar(isPlay: true, high: CGFloat(coreEngine.rmsData) / 0.7)
 
             }
+            
+            Text(coreEngine.emotion.toEmoji())
+                .font(.title)
+            
             Spacer()
             RecordingButton {
                 coreEngine.startAudioEngine()
