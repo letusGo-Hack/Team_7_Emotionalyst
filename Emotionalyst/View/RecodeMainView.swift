@@ -13,19 +13,11 @@ struct EmotionalystView: View {
     @Query private var items: [Item]
     
     var body: some View {
-        TabView {
-            RecordingView()
-                .tabItem {
-                    Image(systemName: "waveform")
-                    Text("recording")
-                }
-            RecordListView()
-                .tabItem {
-                    Image(systemName: "music.note.list")
-                    Text("List")
-                }
-        }
-        
+        RecordingView()
+            .tabItem {
+                Image(systemName: "waveform")
+                Text("recording")
+            }
     }
     
     private func addItem() {
