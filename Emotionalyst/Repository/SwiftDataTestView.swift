@@ -18,18 +18,20 @@ struct SwiftDataTestView: View {
     var body: some View {
         
         Button {
-            let item = AudioItem(urlString: "\(count)",
-                                 timestamp: Date(),
-                                 emotion: .happy)
-            context.insert(item)
-            count += 1
+            if let url = URL(string: "\(count)" ) {
+                let item = AudioItem(url: url,
+                                     timestamp: Date(),
+                                     emotion: .happy)
+                context.insert(item)
+                count += 1
+            }
         } label: {
             Text("추가")
         }
 
         List {
             ForEach(items) { item in
-                Text("\(item.urlString), \(item.timestamp), \(item.emotion)")
+                Text("\(item.url.absoluteString), \(item.timestamp), \(item.emotion)")
             }
         }
         

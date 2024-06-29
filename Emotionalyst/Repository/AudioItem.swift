@@ -10,12 +10,12 @@ import SwiftData
 
 @Model
 class AudioItem {
-    var urlString: String
+    var url: URL
     var timestamp: Date
     var emotion: Emotion
     
-    init(urlString: String, timestamp: Date, emotion: Emotion) {
-        self.urlString = urlString
+    init(url: URL, timestamp: Date, emotion: Emotion) {
+        self.url = url
         self.timestamp = timestamp
         self.emotion = emotion
     }
