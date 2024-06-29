@@ -7,19 +7,30 @@
 
 
 import AVFoundation
+import Accelerate
+import AVFAudio
 import CoreML
 
-class CoreEngine:NSObject,AVAudioRecorderDelegate{
+class CoreEngine: ObservableObject {
     
-    
+    private let eqNode = AVAudioUnitEQ(numberOfBands: 1)
+    private lazy var eqFilterParameters: AVAudioUnitEQFilterParameters = eqNode.bands[0] as AVAudioUnitEQFilterParameters
     var audioEngine: AVAudioEngine!
     var inputNode: AVAudioInputNode!
     var model: Emotion_Analstics_Gish?
     
-    override init() {
-        super.init()
+    @Published var rmsData: Float = 0.0
+    
+    init() {
         self.audioEngine = AVAudioEngine()
         self.inputNode = audioEngine.inputNode
+        self.eqFilterParameters.filterType = .bandPass
+        self.eqFilterParameters.bypass = false
+        self.eqFilterParameters.frequency = 40000
+        let format = inputNode.outputFormat(forBus: 0)
+        audioEngine.attach(eqNode)
+        audioEngine.connect(inputNode, to: eqNode, format: format)
+        
         do{
             self.model = try Emotion_Analstics_Gish(configuration: MLModelConfiguration())
         }catch{
@@ -31,15 +42,40 @@ class CoreEngine:NSObject,AVAudioRecorderDelegate{
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
             self.analyzeAudio(buffer: buffer)
+            guard let channelData = buffer.floatChannelData else { return }
+            let channelDataValue = channelData.pointee
+            let frames = buffer.frameLength
+            let rmsValue = self.rms(data: channelDataValue, frameLength: UInt(frames))
+            self.rmsData = rmsValue
         }
         
         audioEngine.prepare()
         do{
             try audioEngine.start()
+            print(eqNode.bands[0].frequency)
         }catch{
             print("AudioEngine start error: \(error.localizedDescription)")
         }
     }
+    
+    static func readBuffer(_ audioFile: AVAudioFile) -> [Float] {
+        let audioFormat = audioFile.processingFormat
+        let audioFrameCount = UInt32(audioFile.length)
+        guard
+          let buffer = AVAudioPCMBuffer(pcmFormat: audioFormat, frameCapacity: audioFrameCount)
+        else {
+          return []
+        }
+        do {
+          try audioFile.read(into: buffer)
+        } catch {
+          print("Read Buffer Error")
+        }
+
+        let floatArray = Array(UnsafeBufferPointer(start: buffer.floatChannelData![0], count: Int(buffer.frameLength)))
+
+        return floatArray
+      }
     
     private func analyzeAudio(buffer: AVAudioPCMBuffer){
         guard let model = model else {
@@ -88,6 +124,12 @@ class CoreEngine:NSObject,AVAudioRecorderDelegate{
         }
     }
     
+    private func rms(data: UnsafeMutablePointer<Float>, frameLength: UInt) -> Float {
+        var val : Float = 0
+        vDSP_measqv(data, 1, &val, frameLength)
+        val *= 1000
+        return val
+    }
     
     /*
     var audioEngine: AVAudioEngine!
