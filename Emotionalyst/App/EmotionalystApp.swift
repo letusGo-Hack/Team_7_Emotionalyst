@@ -25,7 +25,7 @@ struct EmotionalystApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmotionalystView()
         }
         .modelContainer(sharedModelContainer)
     }
