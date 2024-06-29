@@ -21,6 +21,7 @@
 		D60296962C2F9FCF003E83AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60296952C2F9FCF003E83AA /* Preview Assets.xcassets */; };
 		D6D00D612C2FF99900AE7C28 /* CoreEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D00D602C2FF99900AE7C28 /* CoreEngine.swift */; };
 		D6D00D632C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D6D00D622C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel */; };
+		D6D00D652C2FFCC800AE7C28 /* RecordAnalyst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D00D642C2FFCC800AE7C28 /* RecordAnalyst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D60296952C2F9FCF003E83AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6D00D602C2FF99900AE7C28 /* CoreEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreEngine.swift; sourceTree = "<group>"; };
 		D6D00D622C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Emotion_Analstics_Gish.mlmodel; sourceTree = "<group>"; };
+		D6D00D642C2FFCC800AE7C28 /* RecordAnalyst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAnalyst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				1780FD9A2C2FD2CA008F8937 /* AudioEngine.swift */,
 				D6D00D602C2FF99900AE7C28 /* CoreEngine.swift */,
 				1780FD9C2C2FD3EE008F8937 /* AudioRecoder.swift */,
+				D6D00D642C2FFCC800AE7C28 /* RecordAnalyst.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				1780FD9D2C2FD3EE008F8937 /* AudioRecoder.swift in Sources */,
 				D6D00D612C2FF99900AE7C28 /* CoreEngine.swift in Sources */,
+				D6D00D652C2FFCC800AE7C28 /* RecordAnalyst.swift in Sources */,
 				D602968F2C2F9FCE003E83AA /* RecodeMainView.swift in Sources */,
 				1780FDA22C2FD6A0008F8937 /* RecordPlayerView.swift in Sources */,
 				D6D00D632C2FF9EA00AE7C28 /* Emotion_Analstics_Gish.mlmodel in Sources */,
